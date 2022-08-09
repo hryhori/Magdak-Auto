@@ -3,19 +3,25 @@ import Header from './components/Header/Header';
 import Intro from './components/Intro/Intro';
 import Galery from './components/Galery/Galery';
 import Contacts from './components/Contacts/Contacts';
-import { useRef, useEffect, useState } from 'react';
+import { useState} from 'react';
+import LangContext from './LangContext';
+
 
 function App() {
+  const [lang, setLang] = useState('ru')
   return (
     <div className={s.App}>
       <div className={s.container}>
-        <Header />
-        <Intro/>
-        <Galery/>
-        <Contacts/>
+        <LangContext.Provider value={{lang, setLang}}>
+          <Header />
+          <Intro />
+          <Galery />
+          <Contacts />
+        </LangContext.Provider>
       </div>
     </div>
   );
 }
+
 
 export default App;

@@ -6,24 +6,36 @@ import lexus from '../../images/lexus.svg';
 import mitsubishi from '../../images/mitsubishi.svg';
 import nissan from '../../images/nissan.svg';
 import toyota from '../../images/toyota.svg';
+import { useContext } from 'react';
+import LangContext from '../../LangContext';
 
 function Intro(){
+  const {lang} = useContext(LangContext);
+  const Texts = {language: {
+    'ru' : ['лучшее решение','для вашего автомобиля','Уделяем максимальное внимание каждому автомобилю,','что делает качество обслуживания наивысшим.',
+            'Узнать больше','Записаться', 'Наши специалисты подготовлены во всех направлениях авто-ремонта.'],
+    'ua' : ['краще рішення','для вашого автомобіля','Приділяємо максимальну увагу кожному автомобілю,','що робить якість обслуговування найвищою.',
+            'Дізнатися більше','Записатись','Наші фахівці підготовлені у всіх напрямках авто-ремонту.'],
+    'en' : ['best choice', 'for youre vehicle', 'We pay maximum attention to each car,', 'which makes the quality of service the highest.',
+             'Learn more', 'Make appointment', 'Our specialists are trained in all areas of auto repair.'],
+  }}
+  const TextsArray = Texts.language[lang];
     return (
       <main className={s.intro} id={'about'}>
         <div className={s.intro__info}>
           <h1 className={s.intro__info_title}>
             MAGDAK-AUTO <br />
-            лучшее решение
+            {TextsArray[0]}
             <br />
-            для вашего автомобиля
+            {TextsArray[1]}
           </h1>
           <p className={s.intro__info_subtitle}>
-            Уделяем максимальное внимание каждому автомобилю,
-            <br /> что делает качество обслуживания наивысшим.
+          {TextsArray[2]}
+            <br /> {TextsArray[3]}
           </p>
           <div className={s.intro__info_btn_group}>
-            <button className={s.btn}>Узнать больше</button>
-            <button className={s.btn_outline}>Записаться</button>
+            <button className={s.btn}>{TextsArray[4]}</button>
+            <button className={s.btn_outline}>{TextsArray[5]}</button>
           </div>
           <div className={s.intro__info_video}>
             <iframe
@@ -33,7 +45,7 @@ function Intro(){
               title="YouTube video player"
               frameBorder="0"
             ></iframe>
-            <span className={s.intro__info_subtitle}>Наши специалисты подготовлены во всех направлениях авто-ремонта.</span>
+            <span className={s.intro__info_subtitle}>{TextsArray[6]}</span>
           </div>
         </div>
         <div className={s.intro__humanFrame}>
