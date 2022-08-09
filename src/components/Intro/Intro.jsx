@@ -9,7 +9,7 @@ import toyota from '../../images/toyota.svg';
 
 function Intro(){
     return (
-      <main className={s.intro}>
+      <main className={s.intro} id={'about'}>
         <div className={s.intro__info}>
           <h1 className={s.intro__info_title}>
             MAGDAK-AUTO <br />

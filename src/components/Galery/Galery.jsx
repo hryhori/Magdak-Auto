@@ -24,7 +24,7 @@ function Galery(){
         'Ремонт выхлопной системы',
     ]
     return(
-        <div className={s.galery__wrapper}>
+        <div className={s.galery__wrapper} id={'galery'}>
             <div className={s.galery__wrapper_text}>
                 <h1 className={s.intro__info_title}>
                     MAGDAK-AUTO - надёжность

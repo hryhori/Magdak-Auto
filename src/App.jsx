@@ -6,14 +6,10 @@ import Contacts from './components/Contacts/Contacts';
 import { useRef, useEffect, useState } from 'react';
 
 function App() {
-  const [BlockWidth, setBlockWidth] = useState();
-  const ContainerRef = useRef(null);
-
-  useEffect(() => {setBlockWidth(ContainerRef.current.clientWidth)}, []);
   return (
     <div className={s.App}>
-      <div className={s.container} ref={ContainerRef}>
-        <Header width={BlockWidth}/>
+      <div className={s.container}>
+        <Header />
         <Intro/>
         <Galery/>
         <Contacts/>

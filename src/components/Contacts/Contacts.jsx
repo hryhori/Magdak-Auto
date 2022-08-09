@@ -5,7 +5,7 @@ import { TelephoneFill, EnvelopeFill, } from 'react-bootstrap-icons';
 
 function Contacts(){
     return (
-      <div className={s.contacts}>
+      <div className={s.contacts} id={'contacts'}>
         <div className={s.contacts__info}>
           <h1 className={s.contacts__info_title}>
             Вы всегда можете
