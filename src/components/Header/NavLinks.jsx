@@ -1,6 +1,6 @@
 import s from '../../styles/main.module.scss'
 import { motion } from 'framer-motion';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import LangContext from '../../LangContext';
 
 function NavLinks({setMenuActive, isMobile}){
@@ -9,7 +9,8 @@ function NavLinks({setMenuActive, isMobile}){
   const animateTo = {opacity: 1, y: 0};
 
   const {lang, setLang} = useContext(LangContext);
-  const [langWidth, setLangWidth] = useState('50px');
+  const [langWidth, setLangWidth] = useState('80px');
+  const SelRef = useRef();
 
   const Text = {language:{ 
     'ru': ['О нас','Галерея','Контакты','Электробайки'],
@@ -39,16 +40,18 @@ function NavLinks({setMenuActive, isMobile}){
            </motion.li>
            <motion.li initial={animateFrom} animate={animateTo} transition={{delay:0.7}} className={s.header__menu_item}>
              {" "}
-             <a href="/" className={s.header__menu_link}>
+             <a href="#about" className={s.header__menu_link}>
              {TextsArray[3]}
              </a>
            </motion.li>
            <motion.li className={s.header__menu_item}>
-            <select onClick={(e)=>e.stopPropagation()} className={s.header__menu_language_switch} style={{width: langWidth}}> 
-              <option value="ru" onClick={()=>{setLang('ru'); setLangWidth('200px')}}>ru [Страна Террорист]</option>
-              <option value="ua" onClick={()=>{setLang('ua'); setLangWidth('80px')}}>UA 🇺🇦</option>
-              <option value="en" onClick={()=>{setLang('en'); setLangWidth('80px')}}>EN 🇺🇸</option>
-              <option value={lang} selected onClick={()=>{setLangWidth('50px')}}>🌏</option>
+            <select onClick={(e)=>e.stopPropagation()} className={s.header__menu_language_switch} style={{width: langWidth}} ref={SelRef}
+             onChange={()=>{setLang(SelRef.current.value); 
+             let width;  SelRef.current.value!=='ua' && SelRef.current.value!=='en' ? width='200px' : width='80px';
+             setLangWidth(width)}}> 
+             <option value='ua' >UA 🇺🇦</option>
+              <option value='ru'>ru [Страна Террорист]</option>
+              <option value='en' >EN 🇺🇸</option>
             </select>
            </motion.li>
          </ul>

@@ -30,8 +30,9 @@ function Carousel ({images, texts}){
                     src={img}
                     alt={index}
                     style={{
-                        height: '100%',
-                      objectFit: "cover",
+                        maxWidth: `${PAGE_WIDTH.current.clientWidth - 20}px`,
+                        height: "100%",
+                        objectFit: "contain",
                     }}
                   />
                 </div>

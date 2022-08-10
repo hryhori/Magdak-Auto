@@ -60,10 +60,10 @@ function Galery(){
     return(
         <div className={s.galery__wrapper} id={'galery'}>
             <div className={s.galery__wrapper_text}>
-                <h1 className={s.intro__info_title}>
+                <h1 className={s.galery__wrapper_title}>
                     MAGDAK-AUTO - {Texts.language[lang][0]}
                 </h1>
-                <p className={s.intro__info_subtitle}>{Texts.language[lang][1]}</p>
+                <p className={s.galery__wrapper_subtitle}>{Texts.language[lang][1]}</p>
             </div>
             <Carousel images={images} texts={carousel_texts.language[lang]}/>
         </div>

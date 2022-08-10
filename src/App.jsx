@@ -8,7 +8,7 @@ import LangContext from './LangContext';
 
 
 function App() {
-  const [lang, setLang] = useState('ru')
+  const [lang, setLang] = useState('ua')
   return (
     <div className={s.App}>
       <div className={s.container}>

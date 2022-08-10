@@ -2,7 +2,6 @@ import s from '../../styles/main.module.scss'
 import { GearFill, X }  from 'react-bootstrap-icons';
 import { useEffect, useRef, useState } from 'react';
 import NavLinks from './NavLinks';
-import { lock, unlock } from 'tua-body-scroll-lock';
 
 export function HeaderMain(){
     return(
@@ -24,7 +23,6 @@ export function HeaderAdaptive(){
         <div className={s.headerAdaptive} ref={BodyRef}>
         <div className={s.header__logo} onClick={()=>setMenuActive(!menuActive)}>{menuActive? Cancel : Gear}</div>
        {menuActive ? <NavLinks isMobile={true} setMenuActive={setMenuActive}/> : null} 
-       {menuActive ? lock(TargetElement): unlock(TargetElement)}
     </div>
     )
 }
