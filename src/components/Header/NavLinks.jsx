@@ -17,7 +17,6 @@ function NavLinks({setMenuActive, isMobile}){
     'en': ['About', 'Galery', 'Contacts', 'Electrobikes'],
   }};
   let TextsArray =  Text.language[lang];
-
   return (
        <motion.nav initial={animateFrom} animate={animateTo} transition={{delay:0.1}} className={s.header__menu} onClick={()=>isMobile && setMenuActive(false)}>
          <ul className={s.header__menu_list}>
