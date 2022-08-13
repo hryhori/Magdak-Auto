@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  background-image: linear-gradient(to bottom right, #3B1D60, #040D3E);
   -webkit-background-size: 100%; 
     -moz-background-size: 100%; 
     -o-background-size: 100%; 
@@ -13,6 +12,7 @@ body {
 
 html{
   scroll-behavior: smooth;
+  background-image: linear-gradient(to bottom right, #3B1D60, #040D3E);
 }
 
 code {

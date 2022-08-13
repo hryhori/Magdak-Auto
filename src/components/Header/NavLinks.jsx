@@ -38,12 +38,6 @@ function NavLinks({setMenuActive, isMobile}){
              {TextsArray[2]}
              </a>
            </motion.li>
-           <motion.li initial={animateFrom} animate={animateTo} transition={{delay:0.7}} className={s.header__menu_item}>
-             {" "}
-             <a href="#about" className={s.header__menu_link}>
-             {TextsArray[3]}
-             </a>
-           </motion.li>
            <motion.li className={s.header__menu_item}>
             <select onClick={(e)=>e.stopPropagation()} className={s.header__menu_language_switch} style={{width: langWidth}} ref={SelRef}
              onChange={()=>{setLang(SelRef.current.value); 

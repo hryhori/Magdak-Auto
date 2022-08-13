@@ -78,7 +78,7 @@ function Contacts(){
                 {Texts.language[lang][10]}
                   <EnvelopeFill />
                 </h1>
-                <ul className={s.contacts__card_telephone_list}>
+                <ul className={s.contacts__card_telephone_list} style={{margin: '0px'}}>
                   <li className={s.contacts__card_telephone_list_item}>
                     <a href="mailto:nissan.sto.2@gmail.com">
                       nissan.sto.2@gmail.com

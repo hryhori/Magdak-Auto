@@ -95,8 +95,8 @@
 
 .intro{
     margin-top: 50px ;
-    min-height: calc(100vh - 80px - 36px - 50px);
     height: 100%;
+    min-height: calc(100vh - 80px - 36px - 50px);
     display: grid;
     grid-template: auto 63px / 1fr 1fr;
 }
@@ -155,11 +155,12 @@
 }
 
 .galery__wrapper{
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-around;
+    place-content: center;
     background-image: url(../images/SecondFrame.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -231,9 +232,11 @@
 
 .contacts{
     position: relative;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     display: grid;
-    grid-template: 100vh / 1fr 1fr;
+    grid-template: minmax(500px, 100vh) / 1fr 1fr;
+    padding: 20px 0px;
 }
 
 .contacts__info{
@@ -292,6 +295,7 @@
 .contacts__card{
     width: 260px;
     height: 415px;
+    padding: 10px 0px;
     position: absolute;
     left: 0%;
     right: 0%;
@@ -397,6 +401,7 @@
 
 .btn{
     background-color: $Accent;
+    text-decoration: none;
     padding: 13px 32px;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -415,12 +420,16 @@
 }
 
 .btn_outline {
+    text-decoration: none;
     border: 1px solid $Accent;
     border-radius: 5px;
     color: $Accent;
     text-transform: uppercase;
     background: none;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     letter-spacing: 2px;
     font-family: $Roboto;
     font-weight: 500;
@@ -489,15 +498,13 @@
     }
     .contacts__block{
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
     }
     .contacts__card{
         position: inherit;;
     }
-    .card__aside{
-        display: none;
-    }
+
     .card__asideArrow{
         display: none;
     }
@@ -539,7 +546,7 @@
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 428px){
 
     .intro__info_video{
         grid-template: auto auto / auto;

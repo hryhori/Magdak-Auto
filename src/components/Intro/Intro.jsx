@@ -34,8 +34,8 @@ function Intro(){
             <br /> {TextsArray[3]}
           </p>
           <div className={s.intro__info_btn_group}>
-            <button className={s.btn}>{TextsArray[4]}</button>
-            <button className={s.btn_outline}>{TextsArray[5]}</button>
+            <a href="#galery" className={s.btn}>{TextsArray[4]}</a>
+            <a href="tel:+380675657221" className={s.btn_outline}>{TextsArray[5]}</a>
           </div>
           <div className={s.intro__info_video}>
             <iframe
