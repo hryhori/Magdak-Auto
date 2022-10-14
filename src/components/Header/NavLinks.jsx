@@ -1,6 +1,6 @@
 import s from '../../styles/main.module.scss'
 import { motion } from 'framer-motion';
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useContext,useRef, useState } from 'react';
 import LangContext from '../../LangContext';
 
 function NavLinks({setMenuActive, isMobile}){

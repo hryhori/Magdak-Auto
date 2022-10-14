@@ -1,5 +1,4 @@
 import s from '../../styles/main.module.scss';
-import map from '../../images/worldmap.svg';
 import arrowUp from '../../images/ArrowUp.svg';
 import { TelephoneFill, EnvelopeFill, } from 'react-bootstrap-icons';
 import { useContext } from 'react';
@@ -36,18 +35,16 @@ function Contacts(){
           </a>
         </div>
         <div className={s.contacts__main}>
-          <div className={s.contacts__map}>
-            <img src={map} alt="map" />
-          </div>
           <div className={s.contacts__block}>
             <div className={s.contacts__card}>
               <div className={s.contacts__card_top}>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2649.8232705377213!2d35.0014359!3d48.3831311!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x558b12c8229d6b4d!2sMAGDAK-AUTO%20NISSAN%20INFINITI%20TOYOTA%20LEXUS!5e0!3m2!1sru!2str!4v1659977955562!5m2!1sru!2str"
-                  width="260"
+                  width="280"
                   height="200"
                   style={{ border: 0 }}
                   loading="lazy"
+                  title='map'
                 ></iframe>
               </div>
               <div className={s.contacts__card_text}>

@@ -38,7 +38,7 @@ function Carousel ({images, texts}){
                 </div>
             )})
         )
-    },[texts])
+    },[texts, images])
 
     return (
         <div className={s.carousel}>
