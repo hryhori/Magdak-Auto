@@ -544,7 +544,10 @@
         justify-content: center;
     }
     .contacts__card{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
     .header{
         display: none;
