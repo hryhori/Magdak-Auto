@@ -409,6 +409,14 @@
     align-items: center;
 }
 
+.contacts__card_mail{
+    font-family: $Mont;
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: none;
+    color: #13C296
+}
+
 // Buttons
 
 .btn{
@@ -588,5 +596,4 @@
     .card__asideArrow{
         display: none;
     }
-
 }
