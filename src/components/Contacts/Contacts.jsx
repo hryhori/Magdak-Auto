@@ -23,7 +23,7 @@ function Contacts(){
             <span className={s.contacts__info_title_accent}>
               <br /> {Texts.language[lang][2]}
             </span>
-          </h1>
+          </h1>``
           <p className={s.contacts__info_subtitle}>
             {Texts.language[lang][3]}
           </p>
