@@ -71,6 +71,7 @@ function Contacts(){
                   </li>
                 </ul>
                 <hr />
+                <div className={s.contacts__card_block}>
                 <h1 className={s.contacts__card_title}>
                 {Texts.language[lang][10]}
                   <EnvelopeFill />
@@ -78,6 +79,7 @@ function Contacts(){
                 <a href="mailto:nissan.sto.2@gmail.com" className={s.contacts__card_mail}>
                       nissan.sto.2@gmail.com
                     </a>
+                </div>
               </div>
             </div>
             <div className={s.card__aside}>
