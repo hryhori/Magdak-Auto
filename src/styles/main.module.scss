@@ -75,23 +75,23 @@
 }
 
 .header__menu_language_switch{
-    appearance: menulist;
-    -webkit-appearance: menulist;
+    appearance: none;
+    -webkit-appearance: none;
+    justify-content: center;
     background-color: transparent;
-    text-align: right;
+    text-align: center;
     border: 2px solid #000;
     border-radius: 10px;
     margin: 0;
+    -webkit-padding-start: 15px;
     font-family: inherit;
     font-size: inherit;
     cursor: inherit;
     line-height: inherit;
-    padding: 2px;
     transition: width 0.3s ease;
     &::-ms-expand {
         display: none;
       }
-    
 }
 
 .intro{
@@ -306,7 +306,7 @@
     width: 280px;
     max-width: 100%;
     box-sizing: border-box;
-    height: 415px;
+    height: 430px;
     padding: 10px 0px;
     position: absolute;
     left: 50;
