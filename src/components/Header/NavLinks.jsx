@@ -13,9 +13,9 @@ function NavLinks({setMenuActive, isMobile}){
   const SelRef = useRef();
 
   const Text = {language:{ 
-    'ru': ['О нас','Галерея','Контакты','Электробайки'],
-    'ua': ['Про нас','Фотоплiвка','Контакти', 'Электробайки'],
-    'en': ['About', 'Galery', 'Contacts', 'Electrobikes'],
+    'ru': ['О нас','Галерея','Контакты','Электробайки', 'Вакансии'],
+    'ua': ['Про нас','Фотоплiвка','Контакти', 'Электробайки', 'Вакансії'],
+    'en': ['About', 'Galery', 'Contacts', 'Electrobikes', 'Vacancies'],
   }};
   let TextsArray =  Text.language[lang];
   return (
@@ -36,6 +36,12 @@ function NavLinks({setMenuActive, isMobile}){
              {" "}
              <a href="#contacts" className={s.header__menu_link}>
              {TextsArray[2]}
+             </a>
+           </motion.li>
+           <motion.li initial={animateFrom} animate={animateTo} transition={{delay:0.6}} className={s.header__menu_item}>
+             {" "}
+             <a href="#vacancy" className={s.header__menu_link}>
+             {TextsArray[4]}
              </a>
            </motion.li>
            <motion.li className={s.header__menu_item}>

@@ -3,16 +3,17 @@ import arrowUp from '../../images/ArrowUp.svg';
 import { TelephoneFill, EnvelopeFill, } from 'react-bootstrap-icons';
 import { useContext } from 'react';
 import LangContext from '../../LangContext';
+import ContactForm from './ContactForm';
 
 function Contacts(){
   const {lang} = useContext(LangContext);
   const Texts = {language: {
-    'ru': ['Вы всегда можете','расcчитывать','на нас','Применяем индивидуальный подход к каждому клиенту.','ПОЗВОНИТЬ НАМ','Контакты:','Мастер СТО','Автоэлектрик',
-    'Автозапчасти','Байки','Email', 'Как проехать?', 'Нажми на меня'],
-    'ua': ['Ви завжди можете','розраховувати','на нас','Застосовуємо індивідуальний підхід до кожного клієнта.','зателефонувати нам',
-    'Контакти:','Майстер СТО','Автоелектрик','Автозапчастини','Байки','Email','Як проїхати?','Натисни на мене'],
-    'en': ['You always can','depend','on us','We apply an individual approach to each client.','Call Us',
-    'Contacts:','SS Master','Electrician','Parts','Bikes','Email','How to get?','Click on me'],
+    'ru': ['Вы всегда можете','расcчитывать','на нас','Применяем индивидуальный подход к каждому клиенту.','Перезвонить мне','Контакты:','Мастер СТО','Автоэлектрик',
+    'Автозапчасти','Байки','Email', 'Как проехать?', 'Нажми на меня', 'Ожидайте, с вами свяжутся в течении рабочего дня'],
+    'ua': ['Ви завжди можете','розраховувати','на нас','Застосовуємо індивідуальний підхід до кожного клієнта.','передзвоніть мені',
+    'Контакти:','Майстер СТО','Автоелектрик','Автозапчастини','Байки','Email','Як проїхати?','Натисни на мене', 'Зачекайте, з вами зв\'яжуться протягом робочого дня'],
+    'en': ['You always can','depend','on us','We apply an individual approach to each client.','Call me back',
+    'Contacts:','SS Master','Electrician','Parts','Bikes','Email','How to get?','Click on me', 'We will contact you as soon as possible'],
     }}
     return (
       <div className={s.contacts} id={'contacts'}>
@@ -23,16 +24,11 @@ function Contacts(){
             <span className={s.contacts__info_title_accent}>
               <br /> {Texts.language[lang][2]}
             </span>
-          </h1>``
+          </h1>
           <p className={s.contacts__info_subtitle}>
             {Texts.language[lang][3]}
           </p>
-          <a
-            className={s.contacts__info_call + " " + s.btn}
-            href="tel:+380675657221"
-          >
-            {Texts.language[lang][4]}
-          </a>
+          <ContactForm buttonText={Texts.language[lang][4]} submitText={Texts.language[lang][13]}/>
         </div>
         <div className={s.contacts__main}>
           <div className={s.contacts__block}>

@@ -5,6 +5,7 @@ import Galery from './components/Galery/Galery';
 import Contacts from './components/Contacts/Contacts';
 import { useState} from 'react';
 import LangContext from './LangContext';
+import Vacancy from './components/Vacancy/Vacancy';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Intro />
           <Galery />
           <Contacts />
+          <Vacancy/>
         </LangContext.Provider>
       </div>
     </div>

@@ -13,13 +13,13 @@ import { useContext } from 'react';
 import LangContext from '../../LangContext';
 
 function Galery(){
-    const images = [first, second, third, fourth, fifth, sixth, seventh, eighth, ninth];
+    const images = [second, first, third, fourth, fifth, sixth, seventh, eighth, ninth];
     const {lang} = useContext(LangContext);
     const carousel_texts = {
       language: {
         'ru': [
-          "Установка защиты моторного отсека",
           "Компьютерная диагностика",
+          "Установка защиты моторного отсека",
           "Замена комплекта сцепления",
           "Замена заднего сальника коленвала",
           "Чистка клапана холостого хода",
@@ -29,8 +29,8 @@ function Galery(){
           "Ремонт выхлопной системы",
         ],
         'ua': [
-          "Установка захисту моторного відсіку",
           "Комп`ютерна діагностика",
+          "Установка захисту моторного відсіку",
           "Заміна комплекту зчеплення",
           "Заміна заднього сальника колінвалу",
           "Чищення клапана холостого ходу",
@@ -40,8 +40,8 @@ function Galery(){
           "Ремонт вихлопної системи",
         ],
         'en': [
-          "Installation of protection of a motor compartment",
           "Computer diagnostics",
+          "Installation of protection of a motor compartment",
           "Clutch Kit Replacement",
           "Replacing the rear crankshaft oil seal",
           "Idle valve cleaning",
