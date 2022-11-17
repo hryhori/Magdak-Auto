@@ -7,8 +7,20 @@ export default function ContactForm({buttonText, submitText}) {
     const {register, handleSubmit, formState:{errors}} = useForm();
     const onSubmit = (data) => {
       setIsReady(true);
+      const sendingData = JSON.stringify({
+        "chat_id": 1039745579,
+    "text": "У вас новый запрос на звонок: "+data.phone,
+      });
       fetch(
-       ( `https://api.telegram.org/bot5757903763:AAFwGDbd3hHPqgREmpGNTzbZ6_2erYOmgvg/sendMessage?chat_id=733619142&text=У вас новый запрос на звонок: ${data.phone}`)
+        "https://api.telegram.org/bot5757903763:AAFwGDbd3hHPqgREmpGNTzbZ6_2erYOmgvg/sendMessage",
+        {
+          method: "POST",
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: sendingData,
+        }
       );
     };
     const [isReady, setIsReady] = useState(false);
@@ -27,7 +39,7 @@ export default function ContactForm({buttonText, submitText}) {
               type="phone"
               {...register("phone", {
                 required: true,
-                minLength: 10,
+                
                 maxLength: 14,
               })}
               placeholder={"+380..."}
