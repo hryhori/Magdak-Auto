@@ -13,11 +13,11 @@ function Intro(){
   const {lang} = useContext(LangContext);
   const Texts = {language: {
     'ru' : ['лучшее решение','для вашего автомобиля','Уделяем максимальное внимание каждому автомобилю,','что делает качество обслуживания наивысшим.',
-            'Узнать больше','Записаться', 'Наши специалисты подготовлены во всех направлениях авто-ремонта.'],
+            'Оставить отзыв','Записаться', 'Наши специалисты подготовлены во всех направлениях авто-ремонта.'],
     'ua' : ['краще рішення','для вашого автомобіля','Приділяємо максимальну увагу кожному автомобілю,','що робить якість обслуговування найвищою.',
-            'Дізнатися більше','Записатись','Наші фахівці підготовлені у всіх напрямках авто-ремонту.'],
+            'Залишити вiдгук','Записатись','Наші фахівці підготовлені у всіх напрямках авто-ремонту.'],
     'en' : ['best choice', 'for youre vehicle', 'We pay maximum attention to each car,', 'which makes the quality of service the highest.',
-             'Learn more', 'Make appointment', 'Our specialists are trained in all areas of auto repair.'],
+             'Leave a comment', 'Make appointment', 'Our specialists are trained in all areas of auto repair.'],
   }}
   const TextsArray = Texts.language[lang];
     return (
@@ -34,7 +34,7 @@ function Intro(){
             <br /> {TextsArray[3]}
           </p>
           <div className={s.intro__info_btn_group}>
-            <a href="#galery" className={s.btn}>{TextsArray[4]}</a>
+            <a href="https://www.google.com/maps/place/MAGDAK-AUTO+NISSAN+INFINITI+TOYOTA+LEXUS/@48.3831311,35.0014359,17z/data=!3m1!4b1!4m6!3m5!1s0x40dbfb2720632e2f:0x558b12c8229d6b4d!8m2!3d48.3831311!4d35.0014359!16s%2Fg%2F11g6_3rqmy" className={s.btn}>{TextsArray[4]}</a>
             <a href="tel:+380675657221" className={s.btn_outline}>{TextsArray[5]}</a>
           </div>
           <div className={s.intro__info_video}>

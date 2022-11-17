@@ -54,16 +54,8 @@ function Contacts(){
                     <b>{Texts.language[lang][6]}</b>
                   </li>
                   <li className={s.contacts__card_telephone_list_item}>
-                    <a href="tel:+38 056 789 32 32">+38 056 789 32 32</a> -{" "}
+                    <a href="tel:+38 067 636 06 37">+38 067 636 06 37</a> -{" "}
                     <b>{Texts.language[lang][7]}</b>
-                  </li>
-                  <li className={s.contacts__card_telephone_list_item}>
-                    <a href="tel:+38 056 789 28 28">+38 056 789 28 28</a> -{" "}
-                    <b>{Texts.language[lang][8]}</b>
-                  </li>
-                  <li className={s.contacts__card_telephone_list_item}>
-                    <a href="tel:+38 067 560 86 90">+38 067 560 86 90</a> -{" "}
-                    <b>{Texts.language[lang][9]}</b>
                   </li>
                 </ul>
                 <hr />
